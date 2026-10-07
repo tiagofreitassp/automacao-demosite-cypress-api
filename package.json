@@ -1,0 +1,29 @@
+{
+  "name": "automacao-demosite-cypress-api",
+  "version": "1.0.0",
+  "description": "Automação de testes para o Demosite utilizando Cypress e API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagofreitassp/automacao-demosite-cypress-api.git"
+  },
+  "keywords": [],
+  "author": "Tiago Freitas - Developer",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tiagofreitassp/automacao-demosite-cypress-api/issues"
+  },
+  "homepage": "https://github.com/tiagofreitassp/automacao-demosite-cypress-api#readme",
+  "devDependencies": {
+    "cypress": "^16.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.6",
+    "xlsx": "^0.18.5"
+  }
+}
