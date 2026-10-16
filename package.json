@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/tiagofreitassp/automacao-demosite-cypress-api#readme",
   "devDependencies": {
-    "cypress": "^16.1.1"
+    "cypress": "^16.2.0"
   },
   "dependencies": {
     "dotenv": "^18.0.6",
