@@ -18,21 +18,31 @@ describe('Cenário 1 - Adicionar livro', () => {
   afterEach(function () {
     if (currentRowIndex === null) return;
 
-    const testState = this.currentTest.state; // 'passed' ou 'failed'
+    const testState = this.currentTest.state;
     const status = testState === 'passed' ? 'Passed' : 'Failed';
+    const cenarioNome = this.currentTest.title.replace(/[^a-zA-Z0-9_-]/g, '_');
 
-    //Exclui o cadastro independente do resultado do teste
+    const dadosEvidencia = {
+      cenario: this.currentTest.title,
+      linhaPlanilha: currentRowIndex + 1,
+      status: status,
+      duracaoMs: this.currentTest.duration,
+      erro: this.currentTest.err ? this.currentTest.err.message : null,
+      dadosSessao: {
+        usuario: sessionStore.username,
+        userId: sessionStore.userID
+      }
+    };
+
+    // Salva evidência em JSON na pasta cypress/report
+    cy.writeFile(`cypress/report/cenario_${cenarioNome}.json`, dadosEvidencia);
+
+    // Limpa a conta e atualiza o Excel (como já implementado)
     cy.excluirConta();
-
-    // Captura mensagem de erro do Cypress/Mocha se houver falha
-    const errorMsg = testState === 'failed' && this.currentTest.err
-      ? this.currentTest.err.message
-      : '';
-
     cy.task('updateExcelStatus', {
       rowIndex: currentRowIndex,
       status: status,
-      errorMsg: errorMsg,
+      errorMsg: dadosEvidencia.erro || '',
       tab: 0
     });
   });

@@ -11,6 +11,7 @@
 - NPM
 - Visual Studio Code (recomendado)
 - Cypress
+- Cypress Mochawesome Reporter
 
 ---
 
@@ -42,7 +43,9 @@
 
 ## Evidências
 
-- As evidências e relatórios são salvos em cypress/report.
+- As evidências e relatórios serão salvos no diretório cypress/report.
+- index.html --> Relatório visual HTML (se usar Mochawesome)
+- evidencias/ --> Payloads e logs de cada requisição (JSON)
 
 ---
 
