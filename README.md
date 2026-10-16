@@ -22,7 +22,7 @@
 ---
 
 ## Cenários
-- Os cenários de testes envolvem validar autenticação, gerar token, criar usuário, consultar livros, adicionar livros, editar livros e excluir livros.
+- Os cenários de testes envolvem validar a autenticação, gerar o token, criar usuário, consultar livros, adicionar livros, editar livros e excluir livros.
 
 ---
 
