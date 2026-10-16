@@ -42,6 +42,10 @@
 
 ## Evidências
 
+- As evidências e relatórios são salvos em cypress/report.
+
+---
+
 ## Observações
 
 ## Links úteis

@@ -151,3 +151,7 @@ cypress/videos/
 cypress/reports/
 cypress/coverage/
 .DS_Store
+
+# Evidence files
+cypress/report/
+cypress/report/**
