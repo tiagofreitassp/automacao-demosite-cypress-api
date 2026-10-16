@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import '../support/commands'
+import '../support/commandsAccount'
 
 const rows = Cypress.expose('excelRows') ? JSON.parse(Cypress.expose('excelRows')) : [];
 
@@ -20,6 +20,9 @@ describe('Cenário 1 - Adicionar livro', () => {
 
     const testState = this.currentTest.state; // 'passed' ou 'failed'
     const status = testState === 'passed' ? 'Passed' : 'Failed';
+
+    //Exclui o cadastro independente do resultado do teste
+    cy.excluirConta();
 
     // Captura mensagem de erro do Cypress/Mocha se houver falha
     const errorMsg = testState === 'failed' && this.currentTest.err
@@ -53,6 +56,8 @@ describe('Cenário 1 - Adicionar livro', () => {
         };
 
         //Realizar cadastro e autenticação do usuário
+        cy.account(row.USERNAME, row.PASSWORD);
+
         //Adicionar o livro à coleção do usuário
         //Consultar se livro esta na coleção
         //Excluir livro da coleção do usuário

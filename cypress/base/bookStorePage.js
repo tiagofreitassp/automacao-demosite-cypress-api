@@ -1,1 +1,0 @@
-import sessionStore from '../support/sessionStore';
