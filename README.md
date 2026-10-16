@@ -21,6 +21,11 @@
 
 ---
 
+## Cenários
+- Os cenários de testes envolvem validar autenticação, gerar token, criar usuário, consultar livros, adicionar livros, editar livros e excluir livros.
+
+---
+
 ## Ambiente
 
 - Este projeto pode ser executado no Windows, MacOS e no Linux.
